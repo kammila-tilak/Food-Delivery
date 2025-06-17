@@ -1,12 +1,12 @@
 import axios from "axios";
-import { createContext,use,useEffect, useState } from "react";
+import { createContext,useEffect, useState } from "react";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
   const [cartItem,setCartItem] = useState({});
-  const url ="http://localhost:4000"
+  const url ="https://food-delivery-3a7e.onrender.com"
   const [token,setToken] = useState("")
   const [food_list,setFoodList] = useState([])
   const [loadingFood, setLoadingFood] = useState(true); // Add loading state
